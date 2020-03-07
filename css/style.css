@@ -417,6 +417,12 @@ template {
   color: #fff;
 }
 
+.button--outline {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
 .hero {
   position: relative;
   display: -webkit-box;
@@ -437,6 +443,15 @@ template {
 
 .hero__content {
   max-width: 670px;
+}
+
+.hero__text {
+  font-size: 22px;
+  max-width: 500px;
+}
+
+.hero__button {
+  margin-right: 20px;
 }
 
 .hero__instagram {
