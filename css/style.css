@@ -379,9 +379,16 @@ template {
           align-items: center;
 }
 
+.menu__contacts {
+  font-family: Futura Demi;
+}
+
 .logo {
   color: #E3B873;
   text-transform: uppercase;
+  font-family: Futura Demi;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .nav__item {
@@ -452,6 +459,8 @@ template {
 
 .hero__button {
   margin-right: 20px;
+  font-size: 15px;
+  font-family: Futura Demi;
 }
 
 .hero__instagram {
@@ -460,6 +469,7 @@ template {
   position: absolute;
   left: 0;
   top: 0;
+  font-family: Futura Demi;
 }
 
 .hero__scroll-down {
@@ -481,6 +491,8 @@ template {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
+  font-family: Yeseva One;
+  font-size: 12px;
 }
 
 .instagram {
@@ -521,7 +533,7 @@ template {
 }
 
 body {
-  font-family: 'Futura Book' , sans-serif;
+  font-family: 'Futura Book' , 'Futura Demi' , sans-serif;
   font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
