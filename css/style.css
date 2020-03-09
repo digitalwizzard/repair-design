@@ -357,6 +357,78 @@ template {
   display: none;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura Book' , 'Futura Demi' , sans-serif;
+  font-size: 14px;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Yeseva One , cursive;
+}
+
+.section-title__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-title__image::before, .section-title__image::after {
+  content: '';
+  width: 32px;
+  height: 2px;
+  margin: 0 10px;
+  background-color: #E3B873;
+}
+
+.container {
+  width: 85%;
+  max-width: 1256px;
+  margin: auto;
+}
+
+.button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: #E3B873;
+  color: #fff;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.button--primary:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.button--outline {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -412,42 +484,6 @@ template {
   margin-right: 45px;
 }
 
-.container {
-  width: 85%;
-  max-width: 1256px;
-  margin: auto;
-}
-
-.button {
-  padding: 13px 20px;
-  border: none;
-  border-radius: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.button--primary {
-  background-color: #E3B873;
-  color: #fff;
-  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-  -webkit-transition: -webkit-box-shadow 0.3s;
-  transition: -webkit-box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
-}
-
-.button--primary:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.button--outline {
-  border: 1px solid #fff;
-  background-color: transparent;
-  color: #fff;
-}
-
 .hero {
   position: relative;
   display: -webkit-box;
@@ -469,6 +505,8 @@ template {
 .hero::before {
   content: '';
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(19, 19, 19, 0.7);
@@ -577,15 +615,5 @@ template {
 
 .title--primary {
   color: #E3B873;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: 'Futura Book' , 'Futura Demi' , sans-serif;
-  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
