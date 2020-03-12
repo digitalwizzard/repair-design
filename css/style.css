@@ -405,6 +405,10 @@ img {
   background-color: #E3B873;
 }
 
+.section-title__heading {
+  font-size: 1.43rem;
+}
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -707,6 +711,24 @@ img {
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 }
 
+.design {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(53%, #fff), color-stop(47%, #131313));
+  background: linear-gradient(to bottom, #fff 53%, #131313 47%);
+}
+
+.section-title__subheader {
+  font-size: 1.43rem;
+  line-height: 1.92rem;
+  font-family: 'Futura Book';
+  max-width: 741px;
+  margin: 1.4rem auto 3.2rem;
+  text-transform: none;
+}
+
+.card__pricetag--design {
+  padding: 1.214rem 6rem 1.214rem 2rem;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px;
@@ -729,6 +751,13 @@ img {
 }
 
 @media screen and (max-width: 900px) {
+  .design {
+    background: none;
+    background-color: #131313;
+  }
+  .design__section-title {
+    color: #fff;
+  }
   .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -743,6 +772,12 @@ img {
   }
   .card__text {
     margin-left: 0;
+  }
+  .card__pricetag--design {
+    padding: 1.214rem 3rem 1.214rem 3rem;
+  }
+  .card__item:nth-child(n+8) {
+    display: none;
   }
 }
 
