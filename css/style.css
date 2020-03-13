@@ -714,6 +714,10 @@ img {
   margin-bottom: 2rem;
 }
 
+.types__container {
+  max-width: 1236px;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -744,9 +748,12 @@ img {
 
 .card__title {
   font-family: 'Yeseva One' , cursive;
-  font-size: 18px;
+  color: #363636;
+  font-size: 1.28rem;
   margin-top: 0;
-  margin-bottom: 0.7rem;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 0.6rem;
 }
 
 .card__list {
@@ -764,12 +771,20 @@ img {
   bottom: -1.79rem;
   font-size: 1.28rem;
   font-family: 'Yeseva One' , cursive;
+  font-style: normal;
+  font-weight: normal;
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
   padding: 1.214rem 2.6rem;
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+}
+
+.card__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.07rem;
 }
 
 .design {
