@@ -918,8 +918,10 @@ img {
     background: none;
     background-color: #131313;
   }
-  .section-title {
+  .design__section-title {
     color: #fff;
+  }
+  .section-title {
     font-family: Yeseva One;
     font-style: normal;
     font-weight: normal;
