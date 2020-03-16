@@ -1137,11 +1137,15 @@ img {
     padding-left: 10px;
     padding-right: 10px;
     width: 100%;
+    max-height: 434px;
   }
   .swiper-slide__heading {
     font-size: 1rem;
     font-style: normal;
     font-weight: normal;
+  }
+  .swiper-slide__text--bottom {
+    padding-bottom: 3rem;
   }
 }
 
