@@ -9,10 +9,34 @@ img
   max-width: 100%
 .section
   padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
     text-align: center
-    text-transform: uppercase
+    &__text
+      text-transform: none
+      font-size: 1.28rem
+      line-height: 2.07rem
+      max-width: 31.57rem
+      font-family: 'Futura Book'
+
+    &--left
+      text-align: left
+    &__heading
+    font-size: 1.43rem
     font-family: Yeseva One , cursive
+    text-transform: uppercase
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 90px
+        height: 2px
+        background-color: $primary
+        margin-left: 2rem
+
     &__image
       display: flex
       justify-content: center
@@ -25,6 +49,15 @@ img
         background-color: $primary
 .section-title
   &__heading
-    font-size: 1.43rem
+    &--primary
+        color: $primary
+        font-style: normal
+        font-weight: normal
+        font-size: 1.93rem
+        line-height: 2.64rem
+        letter-spacing: -0.07em
+
+  
+  
         
           

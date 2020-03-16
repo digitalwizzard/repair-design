@@ -15,25 +15,34 @@
       margin: 0
 
 @media screen and ( max-width: 900px )
-  .container
-    max-width: 340px
-    padding: 0
   .design
     background: none
     background-color: $dark
     &__section-title
       color: $light
+    &__container
+      max-width: 340px
+      padding: 0
   .section-title
     font-family: Yeseva One
     font-style: normal
     font-weight: normal
     font-size: 1.57rem
+    &__text
+      max-width: 315px
+    &--left
+      text-align: left
+      line-height: 158.48%
+      font-size: 25.41rem
+      margin: 0
     &__heading
       font-family: Yeseva One
       font-style: normal
       font-weight: normal
       font-size: 1.66rem
       margin-bottom: 1.3rem
+      &--primary
+        text-align: left
     &__subheader
       font-family: Futura Book
       font-style: normal
@@ -41,7 +50,9 @@
       font-size: 1.1rem
       line-height: 1.55rem
       max-width: 265px
-    
+    &__word
+      &::after
+        display: none    
   .row
     flex-direction: column
     align-items: center
@@ -79,6 +90,12 @@
         display: none
     &__image
       width: 100%
+  .col-50
+    max-width: 360px
+    padding-left: 10px
+    padding-right: 10px
+    width: 100%
+
 
         
 
