@@ -1251,15 +1251,51 @@ img {
 }
 
 @media screen and (max-width: 570px) {
+  .video__play {
+    width: 37px;
+    height: 37px;
+  }
+  .control {
+    background-color: #131313;
+    padding: 0;
+  }
+  .control__policy {
+    margin-bottom: 0.5rem;
+  }
+  .control__label {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: -2px;
+  }
+  .control__input::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .control__input:-ms-input-placeholder {
+    color: #fff;
+  }
+  .control__input::-ms-input-placeholder {
+    color: #fff;
+  }
+  .control__input::placeholder {
+    color: #fff;
+  }
+  .control__video {
+    max-width: 28.3rem;
+    width: 100%;
+    min-height: 17.5rem;
+    background-size: cover;
+  }
   .control__text {
-    font-size: 1rem;
-    line-height: 169.8%;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin-bottom: 2.25rem;
+    color: #fff;
   }
   .control__policy-label {
-    margin-bottom: 63px;
+    margin-bottom: 4rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    color: #fff;
   }
   .control__form {
     -ms-flex-flow: wrap;
@@ -1278,7 +1314,7 @@ img {
     max-width: 340px;
   }
   .control__input-group--first {
-    margin-bottom: 64px;
+    margin-bottom: 4.5rem;
   }
   .contacts__button {
     display: none;
