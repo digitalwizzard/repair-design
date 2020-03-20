@@ -1140,10 +1140,6 @@ img {
   .design__section-title {
     color: #fff;
   }
-  .design__container {
-    max-width: 340px;
-    padding: 0;
-  }
   .section-title {
     font-family: Yeseva One;
     font-style: normal;
@@ -1251,6 +1247,10 @@ img {
 }
 
 @media screen and (max-width: 570px) {
+  .container {
+    max-width: 340px;
+    width: 100%;
+  }
   .video__play {
     width: 37px;
     height: 37px;
@@ -1258,6 +1258,9 @@ img {
   .control {
     background-color: #131313;
     padding: 0;
+  }
+  .control__button {
+    margin-bottom: -20px;
   }
   .control__policy {
     margin-bottom: 0.5rem;

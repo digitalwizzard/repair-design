@@ -20,9 +20,10 @@
     background-color: $dark
     &__section-title
       color: $light
-    &__container
-      max-width: 340px
-      padding: 0
+    // &__container
+    //   max-width: 340px
+    //   width: 100%
+    //   padding: 0
   .section-title
     font-family: Yeseva One
     font-style: normal
@@ -114,6 +115,9 @@
         
 
 @media screen and ( max-width: 570px )
+  .container
+    max-width: 340px
+    width: 100%
   .video
     &__play
       width: 37px
@@ -121,6 +125,8 @@
   .control
     background-color: $dark
     padding: 0
+    &__button
+      margin-bottom: -20px
     &__policy
       margin-bottom: 0.5rem
     &__label
