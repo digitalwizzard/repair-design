@@ -49,6 +49,13 @@ $(document).ready(function () {
   //Валидация формы
   $('.control__form').validate({
     errorClass: "invalid",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -64,21 +71,36 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: {
+        required: true,
+      },
     }, //сообщения
     messages: {
       userName: {
         required: "Заполните поле",
         minlength: "Имя должно быть не короче 2-х букв",
         maxlength: "Имя должно быть не длиннее 15 букв"
-     },
+      },
       userPhone: {
         required: "Заполните поле",
         minlength: "Телефон содержит 10 цифр"
-      }}
+      },
+      policyCheckbox: {
+        required: "Отметьте флажком"
+      },
+    }
   });
+
   $('.footer__form').validate({
     errorClass: "invalid",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -98,7 +120,10 @@ $(document).ready(function () {
       userQuestion : {
         required: true,
         maxlength: 255
-      }
+      },
+      policyCheckbox: {
+        required: true,
+      },
 
     }, //сообщения
     messages: {
@@ -119,11 +144,21 @@ $(document).ready(function () {
         required: "Заполните поле",
         maxlength: "Имя должно быть не длиннее 255 букв"
       },
+      policyCheckbox: {
+        required: "Отметьте флажком"
+      },
     }
   });
 
   $('.modal__form').validate({
     errorClass: "invalid",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+  },
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -139,7 +174,10 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: {
+        required: true,
+      },
     }, //сообщения
     messages: {
       userName: {
@@ -154,7 +192,10 @@ $(document).ready(function () {
       userEmail: {
         required: "Обязательно укажите Email",
         email: "Введите корректный Email"
-      }}
+      },
+      policyCheckbox: {
+        required: "Отметьте флажком"
+    }},
   });
 
   //маска для номера телефона
