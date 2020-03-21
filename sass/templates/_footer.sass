@@ -1,10 +1,31 @@
 .footer
   background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
+  padding-bottom: 0
+  &-icons
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    &__mail
+      margin-right: 0.5rem
+    &__instagram
+      margin-left: 0.5rem
+  &-contacts
+    &__title
+      font-family: Yeseva One
+      font-style: normal
+      font-weight: normal
+      color: $primary
+      font-size: 1.428rem
+      line-height: 2rem
+      text-align: center
+      text-transform: uppercase
   &-wrap
     background-color: $black
     max-width: 63.07rem
     margin: auto
     padding: 2.5rem
+    margin-bottom: 3.714rem
   &__title
     text-transform: uppercase
     font-family: Yeseva One , cursive
@@ -36,3 +57,12 @@
     font-style: normal
     font-weight: 500
     font-size: 1.071rem
+  &__menu
+    background-color: $dark
+    padding: 3.4rem 0
+  &__map
+    max-width: 925px
+    margin: auto
+    margin-bottom: 4.714rem
+    margin-top: 3.1rem
+    filter: grayscale(100%);

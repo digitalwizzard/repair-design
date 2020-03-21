@@ -131,7 +131,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 17
+      },
       // compound rule
       userEmail: {
         required: true,
@@ -144,7 +147,10 @@ $(document).ready(function () {
         minlength: "Имя должно быть не короче 2-х букв",
         maxlength: "Имя должно быть не длиннее 15 букв"
      },
-      userPhone: "Заполните поле",
+     userPhone: {
+      required: "Заполните поле",
+      minlength: "Телефон содержит 10 цифр"
+    },
       userEmail: {
         required: "Обязательно укажите Email",
         email: "Введите корректный Email"
