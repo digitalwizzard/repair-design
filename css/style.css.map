@@ -6,7 +6,7 @@
         "../sass/_fonts.scss",
         "../sass/_normalize.scss",
         "../sass/_variables.sass",
-        "../sass/_settings.sass",
+        "../sass/templates/_header.sass",
         "../sass/_grid.sass",
         "../sass/_interface.sass",
         "../sass/templates/_header.sass",
