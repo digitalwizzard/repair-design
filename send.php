@@ -2,7 +2,6 @@
   $userName = $_POST['userName'];
   $userEmail = $_POST['userEmail'];
   $userPhone = $_POST['userPhone'];
-  echo 'Привет, ' . $name;
 
 // Load Composer's autoloader
 require 'phpmailer/Exception.php';
@@ -31,11 +30,10 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его почта: ${userEmail}";
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
 
     $mail->send();
-    echo 'Сообщение было отправлено!';
+    header('Location: thanks.html');
 } catch (Exception $e) {
-    echo "Сообщение не отправлено, есть ошибка! Код ошибки: {$mail->ErrorInfo}";
+    echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
-?>
