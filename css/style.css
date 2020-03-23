@@ -580,6 +580,14 @@ img {
           justify-content: center;
 }
 
+label.invalid {
+  color: tomato;
+}
+
+input.invalid {
+  border-bottom: 1px solid tomato;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -790,6 +798,10 @@ img {
   color: #E3B873;
 }
 
+.control__input {
+  color: #131313;
+}
+
 .control__button {
   padding: 1.285rem 4.785rem;
 }
@@ -968,6 +980,39 @@ img {
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-bottom: 0;
+}
+
+.footer-icons {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-icons__mail {
+  margin-right: 0.5rem;
+}
+
+.footer-icons__instagram {
+  margin-left: 0.5rem;
+}
+
+.footer__text {
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  color: #E3B873;
+  font-size: 1.428rem;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .footer-wrap {
@@ -975,6 +1020,7 @@ img {
   max-width: 63.07rem;
   margin: auto;
   padding: 2.5rem;
+  margin-bottom: 3.714rem;
 }
 
 .footer__title {
@@ -1031,6 +1077,20 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 1.071rem;
+}
+
+.footer__menu {
+  background-color: #131313;
+  padding: 3.4rem 0;
+}
+
+.footer__map {
+  max-width: 925px;
+  margin: auto;
+  margin-bottom: 4.714rem;
+  margin-top: 3.1rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .modal {
@@ -1099,7 +1159,14 @@ img {
           flex-direction: column;
 }
 
-.modal__input {
+.modal__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 3.428rem;
 }
 
@@ -1114,6 +1181,10 @@ img {
 .modal__button {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+label#policyCheckbox-error {
+  margin-left: 20px;
 }
 
 .swiper-container {
@@ -1322,8 +1393,10 @@ img {
 
 @media screen and (max-width: 570px) {
   .container {
-    max-width: 340px;
+    max-width: 350px;
     width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .video__play {
     width: 37px;
@@ -1418,6 +1491,81 @@ img {
     display: block;
     min-width: 22.86rem;
     margin-bottom: 1.85rem;
+  }
+  .policy__label--center {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .footer {
+    background: #131313;
+  }
+  .footer__br {
+    display: none;
+  }
+  .footer__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__map {
+    width: 100%;
+  }
+  .footer__text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    font-size: 18px;
+    line-height: 138.6%;
+    margin-top: 0;
+  }
+  .footer-icons {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  .footer-icons__mail, .footer-icons__instagram {
+    width: 39px;
+    height: 39px;
+  }
+  .footer__input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  }
+  .footer__menu {
+    display: none;
+  }
+  .footer__policy {
+    margin-bottom: 5rem;
+  }
+  .footer__button {
+    width: 100%;
+  }
+  .footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 3.8rem;
+  }
+  .footer-wrap {
+    padding: 1.1rem;
+    background-color: #131313;
+    margin-bottom: 0;
+  }
+  .footer__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__input-group {
+    margin-bottom: 4.5rem;
+  }
+  .footer__input-group--full-wight {
+    margin-bottom: 0.2rem;
   }
 }
 
