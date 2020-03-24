@@ -807,7 +807,7 @@ input.invalid {
 }
 
 .control__label {
-  margin-bottom: -7px;
+  margin-bottom: -2px;
 }
 
 .control__input-group {
@@ -1263,9 +1263,10 @@ label#policyCheckbox-error {
   bottom: 0;
   right: 0;
   top: 0;
-  width: 600px;
+  max-width: 550px;
   height: 400px;
-  background-color: #131313;
+  padding: 5px;
+  background-color: #181818;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1282,6 +1283,7 @@ label#policyCheckbox-error {
   color: #fff;
   font-size: 2rem;
   text-align: center;
+  border: 1px solid #fff;
   visibility: hidden;
 }
 
@@ -1291,6 +1293,13 @@ label#policyCheckbox-error {
 
 .thanks__close {
   background-color: #E3B873;
+  border: none;
+  border-radius: 2px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: Futura Demi;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1603,6 +1612,9 @@ label#policyCheckbox-error {
   }
   .footer__input-group--full-wight {
     margin-bottom: 0.2rem;
+  }
+  .thanks {
+    max-width: 310px;
   }
 }
 

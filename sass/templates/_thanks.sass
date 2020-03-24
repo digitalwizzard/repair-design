@@ -5,9 +5,10 @@
   bottom: 0
   right: 0
   top: 0
-  width: 600px
+  max-width: 550px
   height: 400px
-  background-color: $dark
+  padding: 5px
+  background-color: $black
   display: flex
   flex-direction: column
   justify-content: center
@@ -15,8 +16,16 @@
   color: $light
   font-size: 2rem
   text-align: center
+  border: 1px solid $light
   visibility: hidden
   &--visible
     visibility: visible
   &__close
     background-color: $primary
+    border: none
+    border-radius: 2px
+    padding: 1rem
+    font-size: 1.5rem
+    font-family: Futura Demi
+    text-transform: uppercase
+    cursor: pointer
