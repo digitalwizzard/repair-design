@@ -41,6 +41,12 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
+  var thanks = $('.thanks'),
+    closeBtn = $('.thanks__close');
+      closeBtn.on('click', function () {
+      thanks.toggleClass('thanks--visible');
+    });
+
   next.css('left', prev.width() + 10 + bullets.width() + 10 )
   bullets.css('left', prev.width() + 10 )
 
@@ -96,7 +102,7 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, наши менеджеры скоро свяжутся с вами!');
+          thanks.toggleClass('thanks--visible');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
         }
@@ -158,8 +164,19 @@ $(document).ready(function () {
       },
       policyCheckbox: {
         required: "Отметьте флажком"
-      },
-    }
+      }},
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            thanks.toggleClass('thanks--visible');
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+          }
+        });
+      }
   });
 
   $('.modal__form').validate({
@@ -214,7 +231,7 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, наши менеджеры скоро свяжутся с вами!');
+          thanks.toggleClass('thanks--visible');
           $(form)[0].reset();
           modal.toggleClass('modal--visible');
         }
