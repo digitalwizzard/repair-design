@@ -89,6 +89,20 @@ $(document).ready(function () {
       policyCheckbox: {
         required: "Отметьте флажком"
       },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        dataType: "dataType",
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          alert('Форма отправлена, наши менеджеры скоро свяжутся с вами!');
+          $(form)[0].reset();
+          modal.toggleClass('modal--visible');
+        }
+      });
     }
   });
 
