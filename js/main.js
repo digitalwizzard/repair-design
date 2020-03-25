@@ -269,6 +269,34 @@ $(document).ready(function () {
      return false;
   });  
 });
+$(document).ready(function() {
+ 
+ 
+  $("a.up").click(function() {
+     $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top - 200 + "px"
+     }, {
+        duration: 500,
+        easing: "swing"
+     });
+     return false;
+  });  
+});
+  var player
+  $('.video__play').on('click' , function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'nFWxi3zbsNo',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
   
   //Yandex map
   // Функция ymaps.ready() будет вызвана, когда
