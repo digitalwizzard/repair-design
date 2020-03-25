@@ -375,6 +375,11 @@ img {
   max-width: 100%;
 }
 
+input {
+  outline-color: #E3B873;
+  outline-width: 1px;
+}
+
 .section {
   padding: 60px 0;
 }
@@ -1086,6 +1091,7 @@ input.invalid {
 
 .footer__map {
   max-width: 925px;
+  height: 465px;
   margin: auto;
   margin-bottom: 4.714rem;
   margin-top: 3.1rem;
@@ -1445,12 +1451,15 @@ label#policyCheckbox-error {
     padding-right: 5px;
   }
   .video__play {
-    width: 37px;
-    height: 37px;
+    width: 60px;
+    height: 60px;
   }
   .control {
     background-color: #131313;
     padding: 0;
+  }
+  .control__input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   }
   .control__button {
     margin-bottom: -20px;

@@ -242,5 +242,47 @@ $(document).ready(function () {
   //маска для номера телефона
 
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+  $(document).ready(function() {
+ 
+ 
+    $("a.nav__item").click(function() {
+       $("html, body").animate({
+          scrollTop: $($(this).attr("href")).offset().top - 88 + "px"
+       }, {
+          duration: 500,
+          easing: "swing"
+       });
+       return false;
+    });  
+ });
+ $(document).ready(function() {
+ 
+ 
+  $("a.hero__scroll-down").click(function() {
+     $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top - 200 + "px"
+     }, {
+        duration: 500,
+        easing: "swing"
+     });
+     return false;
+  });  
+});
   
+  //Yandex map
+  // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    // function createMap () {
+    //   var myMap = new ymaps.Map ('map', {
+    //     center: [55.76, 37.64],
+    //     zoom: 7
+    //   });
+    // }
+    setTimeout(function() {
+      var elem = document.createElement('script');
+      elem.type = 'text/javascript';
+      elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=74984f3d-45ab-4643-8a3d-0210e2b7a360&lang=ru_RU&onload=createMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 5000);    
 });
